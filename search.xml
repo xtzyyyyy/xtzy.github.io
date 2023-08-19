@@ -4,13 +4,25 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2023/08/05/%E8%BD%AF%E8%80%83/"/>
-      <url>/2023/08/05/%E8%BD%AF%E8%80%83/</url>
+      <title>linux学习</title>
+      <link href="/2023/08/19/linux%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2023/08/19/linux%E5%AD%A6%E4%B9%A0/</url>
       
-        <content type="html"><![CDATA[<p>维卡表＋picgo</p><p>上午题</p><p>75个选择题</p><p>下午题</p><p>六道题,都是大题(15满分)</p><p>一~四 必答  60</p><p>五、六 选答  选一个</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="1-1-常用文件管理命令"><a href="#1-1-常用文件管理命令" class="headerlink" title="1.1 常用文件管理命令"></a>1.1 常用文件管理命令</h1><p><font color="red"><code>bin</code></font>文件夹:  存的是一些常用的可执行命令</p><p><font color="red"><code>etc</code></font>文件夹:  存的是一些配置文件</p><p><font color="red"><code>var</code></font>文件夹:  存的是一些日志文件</p><p><font color="red"><code>lib</code></font>文件夹:  存的是一些安装包和头文件</p><p><font color="red"><code>home</code></font>文件夹:  存的是所有用户的根目录</p><p><font color="red"><code>proc</code></font>文件夹:  存的是进程相关的一些信息</p><p>回到家目录:  <font color="red"><code>cd ~/</code></font>   或者  <font color="red"><code>cd</code></font></p><p>清除本行:  <font color="red"><code>ctrl + u</code></font></p><p>ls常用参数:  <mark>-l -a -h  </mark>       <mark>  ll &#x3D; ls - la </mark> </p><p>显示当前路径：<font color="red"><code>pwd</code></font></p><p>返回上一层： <font color="red"><code>cd ..</code></font></p><p>返回上一个呆过的目录: <font color="red"><code>cd -</code></font></p><p>复制文件:   <mark>  cp 源文件 目标文件 </mark>     <font color="blue"><code>cp = 复制 + 粘贴 + 重命名</code></font>    <font color="red"><code>复制文件夹加参数 </code></font></p><p>给文件夹的名字起空格: 转义加 <mark> \ </mark> 即可</p><p>创建层级文件夹:  <mark>  mkdir a&#x2F;b&#x2F;c -p </mark> </p><p>创建文件: <font color="red"><code>touch xxx</code></font></p><p>查看历史指令记录; <font color="red"><code>history</code></font></p><p>删除:   <font color="red"><code>  rm xxx yyy  -r(递归删)</code></font>   删库跑路： <mark>  rm &#x2F;* -rf </mark> </p><p>取文件内容; <font color="red"><code>cat xxx</code></font></p><p>mv  cp 唯一区别 一个是直接移动 一个是复制黏贴</p><h2 id="描述路径方式"><a href="#描述路径方式" class="headerlink" title="描述路径方式:"></a>描述路径方式:</h2><ul><li>绝对路径  （从根路径<mark>&#x2F;</mark>开始描述)</li><li>相对路径     (从当前路径开始描述)</li></ul><p><font color="red"><code>代码</code></font></p><p><font color="blue"><code>代码</code></font></p><p><mark>高亮代码</mark></p><p><a href="https://www.bilibili.com/">比例</a></p><blockquote><blockquote><blockquote></blockquote></blockquote></blockquote>]]></content>
       
       
+      <categories>
+          
+          <category> algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
       
     </entry>
     
@@ -37,8 +49,8 @@
     
     <entry>
       <title>算法tips</title>
-      <link href="/2023/07/23/algorithm_tips/"/>
-      <url>/2023/07/23/algorithm_tips/</url>
+      <link href="/2023/07/23/algorithm/"/>
+      <url>/2023/07/23/algorithm/</url>
       
         <content type="html"><![CDATA[<p>1.C++如何让输出保存四位小数</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iomanip></span> <span class="token comment">//引入iomanip头文件</span></span><span class="token keyword">double</span> a<span class="token operator">=</span><span class="token number">123.4567890</span><span class="token punctuation">;</span>cout<span class="token operator">&lt;&lt;</span><span class="token function">setiosflags</span><span class="token punctuation">(</span>ios<span class="token double-colon punctuation">::</span>fixed<span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token function">setprecision</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>a<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>  <span class="token comment">//输出的a就会保留四位小数了。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>·</p><p>2.如何寻找数组中有多个最大值的最小下标？·</p><p>最简单的方法:<font color="Red"><code>将原数组复制一遍到另一个数组 将原数组排序 保存最大值 将另一个数组遍历 第一次遇到最大值就输出 break；</code></font> </p><p>3.求最大公约数 和 最小公倍数</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">gcd</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token keyword">return</span> b <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token function">gcd</span><span class="token punctuation">(</span>a <span class="token punctuation">,</span> b <span class="token operator">%</span> a<span class="token punctuation">)</span> <span class="token operator">:</span> a<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span class="token comment">//最大公倍数</span><span class="token keyword">int</span> lcm <span class="token operator">=</span> a <span class="token operator">*</span> b <span class="token operator">/</span> <span class="token function">GCD</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//注意,这种写法可能错,因为a * b可能因为太大 超出int或者超出longlong 推荐写成int lcm = a / gcd * b</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>4.洛谷p1420 最大连号  （和最长上升子序列相似）</p><p>朴素方法:<font color="Red"><code>直接找每次最长的len 一旦遇到不符合要求的 直接将len 置 0   max = len 最后记得要算上 + 1</code></font> </p><p>5.C++字符串中的字母大小写转换</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;ctype.h></span></span><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>string str<span class="token punctuation">;</span>cin <span class="token operator">>></span> str<span class="token punctuation">;</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> str<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i <span class="token operator">++</span><span class="token punctuation">)</span>str<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">toupper</span><span class="token punctuation">(</span>str<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//转大写 tolower(str[i]); 转小写</span><span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>tips: <font color="Red"><code>1.遍历时 条件 需要注意 能不能加= 的问题  不然就可能出错、（多思考 多练）</code></font></p><p>​<font color="Red"><code>2.对于去除重合部分，如果没有思路的话,可以考虑一下用染色的方法(0 1来判别)  初始化全0  染过的就置为1   染过的就不能再染了(根据 != 1 判别)</code></font></p>]]></content>
       
@@ -74,12 +86,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> 学习 </tag>
-            
-        </tags>
       
     </entry>
     
