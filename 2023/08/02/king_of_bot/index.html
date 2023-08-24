@@ -1,0 +1,748 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>springboot+vue项目-kob | xtzyのblog</title><meta name="author" content="xtzy"><meta name="copyright" content="xtzy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一个伟大的史诗级巨著">
+<meta property="og:type" content="article">
+<meta property="og:title" content="springboot+vue项目-kob">
+<meta property="og:url" content="http://xtzy.xyz/2023/08/02/king_of_bot/index.html">
+<meta property="og:site_name" content="xtzyのblog">
+<meta property="og:description" content="一个伟大的史诗级巨著">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://xtzy.xyz/img/nvzhu1.png">
+<meta property="article:published_time" content="2023-08-02T01:53:27.955Z">
+<meta property="article:modified_time" content="2023-08-23T10:37:41.107Z">
+<meta property="article:author" content="xtzy">
+<meta property="article:tag" content="springboot">
+<meta property="article:tag" content="vue">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://xtzy.xyz/img/nvzhu1.png"><link rel="shortcut icon" href="/img/icon2.png"><link rel="canonical" href="http://xtzy.xyz/2023/08/02/king_of_bot/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'springboot+vue项目-kob',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-08-23 18:37:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"> <link rel="stylesheet" href="/css/style.css?1"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/jianji1.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/nvzhu5.png')"><nav id="nav"><span id="blog-info"><a href="/" title="xtzyのblog"><span class="site-name">xtzyのblog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">springboot+vue项目-kob</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-08-02T01:53:27.955Z" title="Created 2023-08-02 09:53:27">2023-08-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-08-23T10:37:41.107Z" title="Updated 2023-08-23 18:37:41">2023-08-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">5.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>20min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="springboot+vue项目-kob"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="1-配置git环境"><a href="#1-配置git环境" class="headerlink" title="1.配置git环境"></a>1.配置git环境</h2><p>1.安装	<font color="Red"><code>Git bash</code></font>	</p>
+<p>2.打开Git bash,输入cd进入家目录，执行<font color="Red"><code>ssh-keygen</code></font>,生成秘匙,一路回车</p>
+<p>​    此时家目录多会多出几个文件<code>id_rsa.pub</code>是公钥, <code> id_rsa</code>是私钥。</p>
+<p>3.在代码托管平台注册账号,如<code>gitee</code>、<code>github</code>、<code>Acgit</code>。</p>
+<p>4.将<font color="Red"><code>id_rsa.pub</code></font>的内容复制到你所使用的代码托管平台上.  执行命令:<code>cat id_rsa.pub</code>  按住鼠标左键即可完成复制。 </p>
+<h2 id="2-创建仓库"><a href="#2-创建仓库" class="headerlink" title="2.创建仓库"></a>2.创建仓库</h2><p>1.在本地初始化git</p>
+<p>进入本地文件夹.右键点开Git bash,输入命令:<font color="Red"><code>git init</code></font>,会产生一个<code>.git文件夹</code></p>
+<p>git常用命令:</p>
+<pre class="line-numbers language-none"><code class="language-none">git status
+git add.
+git status
+git commit -m &quot;描述&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2.在云端创建一个项目,将本地项目和云端项目对应起来</p>
+<p>按照示例一顿操作即可.</p>
+<p>创建项目注意点: 不勾选使用自述文件初始化仓库</p>
+<p>​							如果有多个项目，不要使用–global</p>
+<p>​							git push -u origin master 默认是<code>master</code> 不是main</p>
+<h2 id="3-创建项目后端"><a href="#3-创建项目后端" class="headerlink" title="3.创建项目后端"></a>3.创建项目后端</h2><p>注意点:Spring Boot建议不要选3以上的版本,可能会有配置问题</p>
+<p>​			依赖的话一般选Spring Web  如果要演示前后端不分离的话选上Thymeleaf</p>
+<h2 id="4-创建项目前端"><a href="#4-创建项目前端" class="headerlink" title="4.创建项目前端"></a>4.创建项目前端</h2><p>注意点:路径里多了#号 去掉Hash</p>
+<p>前后端通信遇到的跨域问题。</p>
+<p>解决:	</p>
+<p>active放哪 哪来就聚焦</p>
+<p>下拉菜单 boostrap找</p>
+<p>导航栏都是一样的 内容不一样</p>
+<p>每一个页面都是一个单独的组件 </p>
+<p>网址跳转:</p>
+<p>前端每一个页面写完，如何和网址产生关联？  router文件夹里的index.js </p>
+<p>将每一个页面导入 import 在routes中每一个页面写一个对象</p>
+<p>实现</p>
+<p>当我们输入根地址时,重定向到pk页面</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">"/"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"home"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">redirect</span><span class="token operator">:</span> <span class="token string">"/pk/"</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>当我们输入其他地址，跳转到404</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">"/:catchAll(.*)"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">redirect</span><span class="token operator">:</span> <span class="token string">"/404/"</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>实现点哪个网站，跳到哪个页面, NavBar里面改一下link即可(href)</p>
+<p>注意点:每次点完之后,页面会刷新</p>
+<p>解决:router组件提供了一个标签,通过标签来实现 将a标签换成router-link标签即可</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"> <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"navbar-brand"</span> href<span class="token operator">=</span><span class="token string">"/"</span><span class="token operator">></span>King Of Bots<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>router<span class="token operator">-</span>link <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"navbar-brand"</span> <span class="token operator">:</span>to<span class="token operator">=</span><span class="token string">"&#123;name: 'home'&#125;"</span><span class="token operator">></span>King Of Bots<span class="token operator">&lt;</span><span class="token operator">/</span>router<span class="token operator">-</span>link<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-link"</span> aria<span class="token operator">-</span>current<span class="token operator">=</span><span class="token string">"page"</span> href<span class="token operator">=</span><span class="token string">"/pk/"</span><span class="token operator">></span>对战<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>router<span class="token operator">-</span>link <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav-link"</span> aria<span class="token operator">-</span>current<span class="token operator">=</span><span class="token string">"page"</span> <span class="token operator">:</span>to<span class="token operator">=</span><span class="token string">"&#123;name: 'pk_index'&#125;"</span><span class="token operator">></span>对战<span class="token operator">&lt;</span><span class="token operator">/</span>router<span class="token operator">-</span>link<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>每一个页面的主要内容都用一个白框框起来(由于是公共组件,在components里定义ContentField.vue)</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-body"</span><span class="token operator">></span>
+      content
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>实现显示聚焦 class 里加入active  需要判断当前在哪个页面</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
+ <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> useRoute <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"vue-router"</span><span class="token punctuation">;</span>
+ <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> computed <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"vue"</span><span class="token punctuation">;</span>
+
+ <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">&#123;</span>
+   <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+     <span class="token keyword">const</span> route <span class="token operator">=</span> <span class="token function">useRoute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token keyword">let</span> route_name <span class="token operator">=</span> <span class="token function">computed</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> route<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+       <span class="token keyword">return</span> <span class="token punctuation">&#123;</span>
+         route_name
+       <span class="token punctuation">&#125;</span>
+   <span class="token punctuation">&#125;</span>
+ <span class="token punctuation">&#125;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>希望在某个属性里用表达式，需要加上冒号  ：就是v-bind:的简写</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>router<span class="token operator">-</span>link <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"navbar-brand"</span> <span class="token operator">:</span>to<span class="token operator">=</span><span class="token string">"&#123;name: 'home'&#125;"</span><span class="token operator">></span>King Of Bots<span class="token operator">&lt;</span><span class="token operator">/</span>router<span class="token operator">-</span>link<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>router<span class="token operator">-</span>link <span class="token operator">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"route_name == 'pk_index' ? 'nav-link active' : 'nav-link'"</span> <span class="token operator">:</span>to<span class="token operator">=</span><span class="token string">"&#123;name: 'home'&#125;"</span><span class="token operator">></span>King Of Bots<span class="token operator">&lt;</span><span class="token operator">/</span>router<span class="token operator">-</span>link<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h2 id="地图"><a href="#地图" class="headerlink" title="地图"></a>地图</h2><p>为了公平,地图完全对称,包括障碍物,且障碍物的数量可以动态调整.</p>
+<p>问题：如果两条蛇在同一时间能走到同一个格子的话 可能对优势者不利.</p>
+<p>解决方法: 策略:调整地图 使两条蛇不会再同一时间进入同一个格子  地图变成 偶数 * 奇数 但是会导致地图不能轴对称  故应该使用中心对称</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>inner_walls_count <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+   <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">1000</span><span class="token punctuation">;</span> j <span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+   <span class="token keyword">let</span> r <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token keyword">this</span><span class="token punctuation">.</span>rows<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">let</span> c <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token keyword">this</span><span class="token punctuation">.</span>cols<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">if</span><span class="token punctuation">(</span>g<span class="token punctuation">[</span>r<span class="token punctuation">]</span><span class="token punctuation">[</span>c<span class="token punctuation">]</span> <span class="token operator">||</span> g<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>rows <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">-</span> r<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>cols <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">-</span> c<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+   <span class="token keyword">if</span><span class="token punctuation">(</span>r <span class="token operator">===</span> <span class="token keyword">this</span><span class="token punctuation">.</span>rows <span class="token operator">-</span> <span class="token number">2</span> <span class="token operator">&amp;&amp;</span> c <span class="token operator">===</span> <span class="token number">1</span> <span class="token operator">||</span> r <span class="token operator">===</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> c <span class="token operator">===</span> <span class="token keyword">this</span><span class="token punctuation">.</span>cols <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span>  <span class="token keyword">continue</span><span class="token punctuation">;</span>
+               g<span class="token punctuation">[</span>r<span class="token punctuation">]</span><span class="token punctuation">[</span>c<span class="token punctuation">]</span> <span class="token operator">=</span> g<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>rows <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">-</span> r<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>cols <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">-</span> c<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+               <span class="token keyword">break</span><span class="token punctuation">;</span>
+           <span class="token punctuation">&#125;</span>
+       <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>地图在前端生成是不科学的,最后会把生成地图的逻辑移到后端，前端就不具备任何逻辑了,只是用来演示动画的.</p>
+<p>科普:游戏里面一个物体是如何动起来的.</p>
+<p>地图每秒钟刷新60次,每一次渲染的画面叫做帧.</p>
+<p>动态计算物体在每一帧的位置是什么，把他渲染出来.</p>
+<p>写一个基类，有游戏中每个物体共有的功能. 每一个物体每一秒钟都需要刷新六十次。</p>
+<p>实现游戏对象.  1.地图   2.墙 障碍物   不管是什么对象 每一帧都要重新渲染一遍 每一个组件都是一个类</p>
+<p>知识点: 如果是export的话 import的时候需要用大括号括起来  如果是export default的话就不用括起来</p>
+<p>导航栏问题 待解决   缩放</p>
+<p>地图用相对距离，不要用绝对距离。</p>
+<p>每一个格子长度为单位1 存的是绝对距离. 未来所有坐标都是存的相对距离</p>
+<p>居中: <code>margin: 0 auto;</code>	</p>
+<p>要引用画布 需要 import { ref } from ‘vue’</p>
+<p>引用完之后需要挂载 import { ref, onMounted } from ‘vue’</p>
+<p>当整个组件挂载完之后,需要创建游戏对象.挂载完之后的函数入口 onMounted 当组件挂载完之后,需要执行哪些操作.</p>
+<p>margin容器实现水平居中, flex容易实现竖直和水平居中</p>
+<p>箭头函数没有this,会向上层指</p>
+<p>为什么墙的颜色  怎么确定顺序呢</p>
+<p>实现方式  GameObject 每创建一个 就push一个 </p>
+<p>概述:</p>
+<p>写的是前端代码,每次用户在刷新浏览器的时候都会将前端代码加载出来</p>
+<p>加载出来之后的话，会先创建游戏地图。游戏地图每秒钟会刷新60次，所以我们看到的就是不变</p>
+<p>然后创建完游戏地图之后,就会创建障碍物。那么障碍物先创建四周 再去随机内部障碍物 然后再去判断他是否连通 如果不连通就重新创建一次 我们会试1k次   如果都不成功就创建不出来地图 大概率都可以成功</p>
+<p>自己实现:点击地图 就可以刷新地图</p>
+<p>任务:实现蛇 和 两个人操作(人和人操作 以及人和AI操作)</p>
+<p>前十步,每一步蛇的长度变长1,后面每三步变长1格</p>
+<p>keys:  坐标轴的坐标和画布的坐标存在变换			<font color="Red"><code>this.y = r + 0.5;</code></font></p>
+<p>蛇怎么动: 计算蛇在每一帧的位置即可 为了方便可以定义蛇的速度 、</p>
+<p><font color="Red"><code>update_move() &#123;     this.cells[0].y -= this.speed * this.timedelta / 1000; &#125; + 0.5;</code></font></p>
+<p>连贯性</p>
+<p>解决: 1. 中间每一个位置都不动 头和尾动  只有两个圈动  </p>
+<p>回合制游戏</p>
+<p>什么时候可以动</p>
+<p>两个人都有输入之后,蛇才能动</p>
+<p>当我们发现两天蛇都有下一步指令时，蛇才能朝着下一步的目的地移动</p>
+<p>蛇变丰满</p>
+<p>相邻两条蛇都用长方形覆盖一边覆盖一遍</p>
+<h1 id="4-配置Mysql与注册登陆模块"><a href="#4-配置Mysql与注册登陆模块" class="headerlink" title="4 配置Mysql与注册登陆模块"></a>4 配置Mysql与注册登陆模块</h1><h1 id="如何让springboot操作mysql"><a href="#如何让springboot操作mysql" class="headerlink" title="如何让springboot操作mysql"></a>如何让springboot操作mysql</h1><ol>
+<li>idea连接数据库 </li>
+<li>配置SpringBoot</li>
+</ol>
+<p>​		在<font color="Red"><code>pom.xml</code></font>文件中添加依赖：</p>
+<ul>
+<li><font color="Red"><code>Spring Boot Starter JDBC</code></font></li>
+<li><font color="Red"><code>Project Lombok</code></font>   &#x2F;&#x2F;自动写一些构造函数 </li>
+<li><font color="Red"><code>MySQL Connector/J</code></font></li>
+<li><font color="Red"><code>mybatis-plus-boot-starter</code></font></li>
+<li><font color="Red"><code>mybatis-plus-generator</code></font>  &#x2F;&#x2F;自动生成一些函数 比如说mapper</li>
+<li><font color="Red"><code>spring-boot-starter-security</code></font></li>
+<li><font color="Red"><code>jjwt-api</code></font></li>
+<li><font color="Red"><code>jjwt-impl</code></font></li>
+<li><font color="Red"><code>jjwt-jackson</code></font></li>
+<li>在<font color="Red"><code>application.properties</code></font>&#x3D;中添加数据库配置：</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">spring<span class="token punctuation">.</span>datasource<span class="token punctuation">.</span>username<span class="token operator">=</span>root
+spring<span class="token punctuation">.</span>datasource<span class="token punctuation">.</span>password<span class="token operator">=</span>zy0201031
+spring<span class="token punctuation">.</span>datasource<span class="token punctuation">.</span>url<span class="token operator">=</span>jdbc<span class="token operator">:</span>mysql<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>localhost<span class="token operator">:</span><span class="token number">3306</span><span class="token operator">/</span>kob<span class="token operator">?</span>serverTimezone<span class="token operator">=</span><span class="token class-name">Asia</span><span class="token operator">/</span><span class="token class-name">Shanghai</span><span class="token operator">&amp;</span>useUnicode<span class="token operator">=</span><span class="token boolean">true</span><span class="token operator">&amp;</span>characterEncoding<span class="token operator">=</span>utf<span class="token operator">-</span><span class="token number">8</span>
+spring<span class="token punctuation">.</span>datasource<span class="token punctuation">.</span>driver<span class="token operator">-</span><span class="token keyword">class</span><span class="token operator">-</span>name<span class="token operator">=</span><span class="token class-name"><span class="token namespace">com<span class="token punctuation">.</span>mysql<span class="token punctuation">.</span>cj<span class="token punctuation">.</span>jdbc<span class="token punctuation">.</span></span>Driver</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ul>
+<li><p><font color="Red"><code>SpringBoot</code></font>中的常用模块 </p>
+<ul>
+<li><p><font color="Red"><code>pojo</code></font>层：将数据库中的表对应成<font color="Red"><code>Java</code></font>中的<font color="Red"><code>Class</code></font></p>
+</li>
+<li><p><font color="Red"><code>mapper</code></font>层（也叫Dao层）：将<font color="Red"><code>pojo</code></font>层的<font color="Red"><code>class</code></font>中的操作，映射成sql语句 </p>
+</li>
+<li><p><font color="Red"><code>service</code></font>层：写具体的业务逻辑，组合使用<font color="Red"><code>mapper</code></font>中的操作</p>
+</li>
+<li><p><font color="Red"><code>controller</code></font>层：负责请求转发，接受页面过来的参数，传给<font color="Red"><code>Service</code></font>处理，接到返回值，再传给页面</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>调试都写在service里  真正实现业务的时候在分开</p>
+<p>RequestMapping会将所有的请求都映射过来，请求的类型有get和post,如果只是映射某一种，只写类型名+Maping</p>
+<p>getMapping好调试,post还得用工具</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@RestController</span> 
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">&#123;</span>
+
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token class-name">UserMapper</span> userMapper<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">"/user/all/"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">></span></span> <span class="token function">getAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> userMapper<span class="token punctuation">.</span><span class="token function">selectList</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">"/user/&#123;userId&#125;/"</span><span class="token punctuation">)</span> <span class="token comment">//springboot里传参</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">getuser</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span> <span class="token keyword">int</span> userId<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">QueryWrapper</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">></span></span> queryWrapper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">QueryWrapper</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        queryWrapper<span class="token punctuation">.</span><span class="token function">eq</span><span class="token punctuation">(</span><span class="token string">"id"</span><span class="token punctuation">,</span>userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> userMapper<span class="token punctuation">.</span><span class="token function">selectOne</span><span class="token punctuation">(</span>queryWrapper<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//        QueryWrapper&lt;User> queryWrapper = new QueryWrapper&lt;>();</span>
+<span class="token comment">//        queryWrapper.ge("id",2).le("id",3);  //这里要返回List&lt;User>   结果是selectList</span>
+<span class="token comment">//        return userMapper.selectOne(queryWrapper);</span>
+
+<span class="token comment">//        return userMapper.selectById(userId);</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">"/user/add/&#123;userId&#125;/&#123;username&#125;/&#123;password&#125;/"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">addUser</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span> <span class="token keyword">int</span> userId<span class="token punctuation">,</span>
+                          <span class="token annotation punctuation">@PathVariable</span> <span class="token class-name">String</span> username<span class="token punctuation">,</span>
+                          <span class="token annotation punctuation">@PathVariable</span> <span class="token class-name">String</span> password<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">User</span> user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span>userId<span class="token punctuation">,</span>username<span class="token punctuation">,</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        userMapper<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token string">"Add User Successful"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">"/user/delete/&#123;userId&#125;"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">deleteUser</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span> <span class="token keyword">int</span> userId<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        userMapper<span class="token punctuation">.</span><span class="token function">deleteById</span><span class="token punctuation">(</span>userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token string">"Delete User Successful"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果要用到数据库里的mapping,一定要加注解@Autowired</p>
+<h2 id="配置用户的认证操作"><a href="#配置用户的认证操作" class="headerlink" title="配置用户的认证操作"></a>配置用户的认证操作</h2><p>权限判断模块</p>
+<p>pom.xml里配置 spring-boot-starter-security</p>
+<p>session的验证一般和cookie是绑定在一起的。信息会存到cookie里面</p>
+<p><strong>如何想让security对接数据库  配置security修改<font color="Red"><code>Spring Security</code></font></strong></p>
+<ul>
+<li><p>实现<font color="Red"><code>service.impl.UserDetailsServiceImpl</code></font>类，继承自<font color="Red"><code>UserDetailsService</code></font>接口，用来接入数据库信息</p>
+</li>
+<li><p>实现<font color="Red"><code>config.SecurityConfig</code></font>类，用来实现用户密码的加密存储</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"> <span class="token annotation punctuation">@Configuration</span>
+ <span class="token annotation punctuation">@EnableWebSecurity</span>
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SecurityConfig</span> <span class="token punctuation">&#123;</span>
+
+ <span class="token annotation punctuation">@Bean</span>
+ <span class="token keyword">public</span> <span class="token class-name">PasswordEncoder</span> <span class="token function">passwordEncoder</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+     <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">BCryptPasswordEncoder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>实现<font color="Red"><code>utils.JwtUtil</code></font>类，为<font color="Red"><code>jwt</code></font>工具类，用来创建、解析jwt token</li>
+<li>实现<font color="Red"><code>config.filter.JwtAuthenticationTokenFilter</code></font>类，用来验证<font color="Red"><code>jwt token</code></font>，如果验证成功，则将User信息注入上下文中</li>
+<li>配置<font color="Red"><code>config.SecurityConfig</code></font>类，放行登录、注册等接口</li>
+</ul>
+</li>
+</ul>
+<p>登录验证成功以后，自动生成一个sessionId,存到数据库里(也可以是其他)，在发给你</p>
+<p>client在登录成功以后,它就会将session记录到cookie里,未来每一次向后端发送请求,它就会默认自动从cookie中取出sessionid放到session里面,传给springboot。springboot查一下sessionid有没有过期,如果没有过期,就不需要判断了.</p>
+<p>数据库中作者定义,存储的密码前面用{noop}表示的话密码就是明文存储</p>
+<p>如果不是明文传输的话,要怎么办？</p>
+<p>需要自己去写一个密码的加密.</p>
+<p>密码加密基于这样一个东西.各种各样的加密算法都有一个特性.</p>
+<p>给我们一个字符串 我们可以很快的将他变成一个新的字符串</p>
+<p>实现<font color="Red"><code>config.SecurityConfig</code></font>类，用来实现用户密码的加密存储</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Configuration</span>
+<span class="token annotation punctuation">@EnableWebSecurity</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SecurityConfig</span> <span class="token punctuation">&#123;</span>
+
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> <span class="token class-name">PasswordEncoder</span> <span class="token function">passwordEncoder</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">BCryptPasswordEncoder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>实现utils.JwtUtil类，为jwt工具类，用来创建、解析jwt token</p>
+<p>将一个字符串 加上密钥 加上有效期 变成一个加密的字符串</p>
+<p>给我们一个令牌 将userid解析出来</p>
+<p>实现config.filter.JwtAuthenticationTokenFilter类，用来验证jwt token，如果验证成功，则将User信息注入上下文中<br>配置config.SecurityConfig类，放行登录、注册等接口</p>
+<h2 id="传统的登陆验证模式（session验证-不方便验证）"><a href="#传统的登陆验证模式（session验证-不方便验证）" class="headerlink" title="传统的登陆验证模式（session验证 不方便验证）"></a>传统的登陆验证模式（session验证 不方便验证）</h2><p>不公开的页面需要授权才能看，不公开的页面授权时会默认读取请求里的sessionid，如果不存在或者说</p>
+<p>sessionid对应的登录信息已经过期，那么它就不能访问这个页面，如果没有过期，就可以根据sessionid将这个用户提取出来，提取出来之后我们就可以正常访问授权链接了。</p>
+<p>可能有多个服务器端,这种模式sessionid 如果用户想通过一个身份登录多个后端，我们就需要将sessionid复制很多份放到多台服务器上，不是很好处理、</p>
+<h2 id="登录授权验证的一个模式-jwt验证方式"><a href="#登录授权验证的一个模式-jwt验证方式" class="headerlink" title="登录授权验证的一个模式(jwt验证方式)"></a>登录授权验证的一个模式(jwt验证方式)</h2><p>优势: </p>
+<p>1.很好的实现跨域</p>
+<p>2.不需要再服务器端存储</p>
+<p>第一段存储用户信息，第二段密钥（只存在里服务器端），有很多种哈希函数和加密函数可以很方便的</p>
+<p>将一个字符错映射到新的字符串，几乎不可逆。</p>
+<p>jtwtoken存在于用户本地，如果被窃取就是活该！！！</p>
+<p>首先通过login页面获取一个token,然后用户在得到这个token之后，会将它存储到浏览器里,然后我们每次在向服务器发送请求的时候,都会带上这个token,那么服务器每次接收到请求时,如果这个令牌是合法的，如果合法，那么服务器就会根据这个令牌的信息,后端会自动从数据库当中查找这个用户，把它提取到上下文当中，然后再访问授权的方法。</p>
+<p>用户访问这个请求之后 先向Spring发送一个请求 Spring根据链接来找要访问哪个Controller 然后在逐步去看怎么修改数据库 Spring修改完数据库之后 将结果返回给前端	</p>
+<p>传统的模式都是用session验证.但是前后端分离模式会有跨域问题,所以说用jwt验证会更加容易.</p>
+<p>tips: 数据库里存头像不会直接存文件，永远都是链接。推荐将图片存放在图床或者云服务器的云盘。</p>
+<p>如果用户篡改自己的数据怎么办</p>
+<p>用户改了第一段，不知道密钥是什么。 知道加密结果不能反推之前的东西</p>
+<h2 id="utils-JwtUtil类"><a href="#utils-JwtUtil类" class="headerlink" title="utils.JwtUtil类"></a>utils.JwtUtil类</h2><p>主要作用:  将一个字符串加上密钥加上有效期变成加密之后的字符串</p>
+<p>​					给我们一个令牌 把它的userid解析出来</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">io<span class="token punctuation">.</span>jsonwebtoken<span class="token punctuation">.</span></span><span class="token class-name">Claims</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">io<span class="token punctuation">.</span>jsonwebtoken<span class="token punctuation">.</span></span><span class="token class-name">JwtBuilder</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">io<span class="token punctuation">.</span>jsonwebtoken<span class="token punctuation">.</span></span><span class="token class-name">Jwts</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">io<span class="token punctuation">.</span>jsonwebtoken<span class="token punctuation">.</span></span><span class="token class-name">SignatureAlgorithm</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>stereotype<span class="token punctuation">.</span></span><span class="token class-name">Component</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>crypto<span class="token punctuation">.</span></span><span class="token class-name">SecretKey</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>crypto<span class="token punctuation">.</span>spec<span class="token punctuation">.</span></span><span class="token class-name">SecretKeySpec</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Base64</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Date</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">UUID</span></span><span class="token punctuation">;</span>
+
+<span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">JwtUtil</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">long</span> <span class="token constant">JWT_TTL</span> <span class="token operator">=</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000L</span> <span class="token operator">*</span> <span class="token number">24</span> <span class="token operator">*</span> <span class="token number">14</span><span class="token punctuation">;</span>  <span class="token comment">// 有效期14天</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token constant">JWT_KEY</span> <span class="token operator">=</span> <span class="token string">"SDFGjhdsfalshdfHFdsjkdsfds121232131afasdfac"</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">String</span> <span class="token function">getUUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token constant">UUID</span><span class="token punctuation">.</span><span class="token function">randomUUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replaceAll</span><span class="token punctuation">(</span><span class="token string">"-"</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">String</span> <span class="token function">createJWT</span><span class="token punctuation">(</span><span class="token class-name">String</span> subject<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">JwtBuilder</span> builder <span class="token operator">=</span> <span class="token function">getJwtBuilder</span><span class="token punctuation">(</span>subject<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token function">getUUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> builder<span class="token punctuation">.</span><span class="token function">compact</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">JwtBuilder</span> <span class="token function">getJwtBuilder</span><span class="token punctuation">(</span><span class="token class-name">String</span> subject<span class="token punctuation">,</span> <span class="token class-name">Long</span> ttlMillis<span class="token punctuation">,</span> <span class="token class-name">String</span> uuid<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">SignatureAlgorithm</span> signatureAlgorithm <span class="token operator">=</span> <span class="token class-name">SignatureAlgorithm</span><span class="token punctuation">.</span><span class="token constant">HS256</span><span class="token punctuation">;</span>
+        <span class="token class-name">SecretKey</span> secretKey <span class="token operator">=</span> <span class="token function">generalKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">long</span> nowMillis <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Date</span> now <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>nowMillis<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>ttlMillis <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            ttlMillis <span class="token operator">=</span> <span class="token class-name">JwtUtil</span><span class="token punctuation">.</span><span class="token constant">JWT_TTL</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token keyword">long</span> expMillis <span class="token operator">=</span> nowMillis <span class="token operator">+</span> ttlMillis<span class="token punctuation">;</span>
+        <span class="token class-name">Date</span> expDate <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>expMillis<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token class-name">Jwts</span><span class="token punctuation">.</span><span class="token function">builder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setId</span><span class="token punctuation">(</span>uuid<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setSubject</span><span class="token punctuation">(</span>subject<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setIssuer</span><span class="token punctuation">(</span><span class="token string">"sg"</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setIssuedAt</span><span class="token punctuation">(</span>now<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">signWith</span><span class="token punctuation">(</span>signatureAlgorithm<span class="token punctuation">,</span> secretKey<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setExpiration</span><span class="token punctuation">(</span>expDate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SecretKey</span> <span class="token function">generalKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> encodeKey <span class="token operator">=</span> <span class="token class-name">Base64</span><span class="token punctuation">.</span><span class="token function">getDecoder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span><span class="token class-name">JwtUtil</span><span class="token punctuation">.</span><span class="token constant">JWT_KEY</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">SecretKeySpec</span><span class="token punctuation">(</span>encodeKey<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> encodeKey<span class="token punctuation">.</span>length<span class="token punctuation">,</span> <span class="token string">"HmacSHA256"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Claims</span> <span class="token function">parseJWT</span><span class="token punctuation">(</span><span class="token class-name">String</span> jwt<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">SecretKey</span> secretKey <span class="token operator">=</span> <span class="token function">generalKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token class-name">Jwts</span><span class="token punctuation">.</span><span class="token function">parserBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setSigningKey</span><span class="token punctuation">(</span>secretKey<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">parseClaimsJws</span><span class="token punctuation">(</span>jwt<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">getBody</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="config-filter-JwtAuthenticationTokenFilter类"><a href="#config-filter-JwtAuthenticationTokenFilter类" class="headerlink" title="config.filter.JwtAuthenticationTokenFilter类"></a>config.filter.JwtAuthenticationTokenFilter类</h2><p>作用： 验证jwt-token是不是合法的 合法的话就会自动将user提取到上下文当中</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">com<span class="token punctuation">.</span>kob<span class="token punctuation">.</span>backend<span class="token punctuation">.</span>mapper<span class="token punctuation">.</span></span><span class="token class-name">UserMapper</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">com<span class="token punctuation">.</span>kob<span class="token punctuation">.</span>backend<span class="token punctuation">.</span>pojo<span class="token punctuation">.</span></span><span class="token class-name">User</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">com<span class="token punctuation">.</span>kob<span class="token punctuation">.</span>backend<span class="token punctuation">.</span>service<span class="token punctuation">.</span>impl<span class="token punctuation">.</span>utils<span class="token punctuation">.</span></span><span class="token class-name">UserDetailsImpl</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">com<span class="token punctuation">.</span>kob<span class="token punctuation">.</span>backend<span class="token punctuation">.</span>utils<span class="token punctuation">.</span></span><span class="token class-name">JwtUtil</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">io<span class="token punctuation">.</span>jsonwebtoken<span class="token punctuation">.</span></span><span class="token class-name">Claims</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>jetbrains<span class="token punctuation">.</span>annotations<span class="token punctuation">.</span></span><span class="token class-name">NotNull</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>beans<span class="token punctuation">.</span>factory<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">Autowired</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>security<span class="token punctuation">.</span>authentication<span class="token punctuation">.</span></span><span class="token class-name">UsernamePasswordAuthenticationToken</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>security<span class="token punctuation">.</span>core<span class="token punctuation">.</span>context<span class="token punctuation">.</span></span><span class="token class-name">SecurityContextHolder</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>stereotype<span class="token punctuation">.</span></span><span class="token class-name">Component</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">StringUtils</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>filter<span class="token punctuation">.</span></span><span class="token class-name">OncePerRequestFilter</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span></span><span class="token class-name">FilterChain</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span></span><span class="token class-name">ServletException</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServletRequest</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServletResponse</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">IOException</span></span><span class="token punctuation">;</span>
+
+<span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">JwtAuthenticationTokenFilter</span> <span class="token keyword">extends</span> <span class="token class-name">OncePerRequestFilter</span> <span class="token punctuation">&#123;</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> <span class="token class-name">UserMapper</span> userMapper<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doFilterInternal</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> request<span class="token punctuation">,</span> <span class="token annotation punctuation">@NotNull</span> <span class="token class-name">HttpServletResponse</span> response<span class="token punctuation">,</span> <span class="token annotation punctuation">@NotNull</span> <span class="token class-name">FilterChain</span> filterChain<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span><span class="token punctuation">,</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">String</span> token <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getHeader</span><span class="token punctuation">(</span><span class="token string">"Authorization"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token class-name">StringUtils</span><span class="token punctuation">.</span><span class="token function">hasText</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token operator">!</span>token<span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span><span class="token string">"Bearer "</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            filterChain<span class="token punctuation">.</span><span class="token function">doFilter</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+
+        token <span class="token operator">=</span> token<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">String</span> userid<span class="token punctuation">;</span>
+        <span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
+            <span class="token class-name">Claims</span> claims <span class="token operator">=</span> <span class="token class-name">JwtUtil</span><span class="token punctuation">.</span><span class="token function">parseJWT</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            userid <span class="token operator">=</span> claims<span class="token punctuation">.</span><span class="token function">getSubject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token class-name">User</span> user <span class="token operator">=</span> userMapper<span class="token punctuation">.</span><span class="token function">selectById</span><span class="token punctuation">(</span><span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>userid<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>user <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"用户名未登录"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token class-name">UserDetailsImpl</span> loginUser <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">UserDetailsImpl</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">UsernamePasswordAuthenticationToken</span> authenticationToken <span class="token operator">=</span>
+                <span class="token keyword">new</span> <span class="token class-name">UsernamePasswordAuthenticationToken</span><span class="token punctuation">(</span>loginUser<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">SecurityContextHolder</span><span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setAuthentication</span><span class="token punctuation">(</span>authenticationToken<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        filterChain<span class="token punctuation">.</span><span class="token function">doFilter</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><strong>Springboot写api一共需要三个地方</strong></p>
+<p>1.Controller  调用接口  用来调用service</p>
+<p>2.Service里面写一个接口  </p>
+<p>3.Servic里的impl里面写一个具体的实现</p>
+<p>autowire和resource区别: aotuwired按类型注入,resource按名称注入</p>
+<p>调试的时候是Post请求，浏览器访问是Get请求，所以不能在浏览器里面进行调试</p>
+<p>解决方法: 下Postman  或者 在前端框架调试</p>
+<p>写注册页面</p>
+<p>grid 用来布局</p>
+<p>需要抄一个表单</p>
+<p>每个页面都需要存当前登录的用户是谁，用户的信息要存全局,要用到vuex</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;form @summit.prevent&#x3D;&quot;login&quot;&gt; &lt;!-- 阻止到默认行为 并且把提交按钮和login函数绑定 --&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<p>登录成功,跳到主页面的实现方法</p>
+<p>1.将router导入到UserAccountView.vue</p>
+<h2 id="退出怎么实现"><a href="#退出怎么实现" class="headerlink" title="退出怎么实现"></a>退出怎么实现</h2><p>token完全存在用户本地,token里存了userid以外 还存了过期时间</p>
+<p>如果用户想退出登录的话,用户自己把token删了就行。</p>
+<p>放到数据库注销</p>
+<p>在user里开一列,记录当天用户当前的token是哪个，每次用户发送终端请求时都更新最新的token，验证的时候判断是不是随机token,如果不是的话就去掉</p>
+<p>token存在浏览器的内存里,一刷新就退出了  下节课做收尾</p>
+<p>token存在localstore里 刷新不会取消登录状态</p>
+<h1 id="4-3-配置Mysql与注册登录模块（下）"><a href="#4-3-配置Mysql与注册登录模块（下）" class="headerlink" title="4.3 配置Mysql与注册登录模块（下）"></a>4.3 配置Mysql与注册登录模块（下）</h1><p>1.实现前端页面授权功能,没有登陆时 页面重定向到登陆页面</p>
+<p>2.实现注册页面</p>
+<p>3.实现登录状态的持久化    </p>
+<p>上一节做完登陆完之后token其实是存在vuex的store里  一刷新内容就清空了</p>
+<p>将token存在本地的一块硬盘里</p>
+<p>1.一种是在router里面实现  需要先记录一个每个页面是不是授权页面</p>
+<p> 有一个函数api  beforeEach(to, from, next)</p>
+<p>当我们每次通过router进入某一个页面时，会调用这个函数。有三个参数to表示跳转到哪个页面 from表示从哪个页面跳转过去 next表示页面要不要执行下一步操作</p>
+<p>每次我们在登录某个页面之前 我们需要判断该页面需不需要登录</p>
+<p>如果我们打开一个需要登录的页面时,就将它定向到登陆页面</p>
+<p>从前端接受到的map是key为账号，value为密码<br>返回给前端的map是你后端设置的提示信息<br>到后面传送数据会有规范的，统一要用json格式的</p>
+<p>tips: </p>
+<p>如果是export default 可以不加括号，反之。</p>
+<h2 id="什么时候需要加表头-什么时候不需要加表头"><a href="#什么时候需要加表头-什么时候不需要加表头" class="headerlink" title="什么时候需要加表头 什么时候不需要加表头"></a>什么时候需要加表头 什么时候不需要加表头</h2><p>当访问的后端api需要授权就需要加表头,公开的就不用加表头。</p>
+<h2 id="实现注册页面-跟登录页面比较像"><a href="#实现注册页面-跟登录页面比较像" class="headerlink" title="实现注册页面(跟登录页面比较像)"></a>实现注册页面(跟登录页面比较像)</h2><h2 id="如何實現实现登录状态的持久化"><a href="#如何實現实现登录状态的持久化" class="headerlink" title="如何實現实现登录状态的持久化"></a>如何實現实现登录状态的持久化</h2><p>將token存到瀏覽器的一小塊硬盤空間(localstorage)</p>
+<p>如果函数内部的修改是异步的只能放在action里 同步操作放在m</p>
+<h2 id="注册的ajax为什么不放在user-js中"><a href="#注册的ajax为什么不放在user-js中" class="headerlink" title="注册的ajax为什么不放在user.js中"></a>注册的ajax为什么不放在user.js中</h2><p>原因是因为当我们有可能会修改state的值的时候,会将我们的操作放在user里面,反之就不用放进去.</p>
+<h2 id="3-登录状态的持久化"><a href="#3-登录状态的持久化" class="headerlink" title="3.登录状态的持久化"></a>3.登录状态的持久化</h2><p>将token存在浏览器的硬盘空间(localstore)里即可</p>
+<h2 id="刷新之后怎么跳到首页"><a href="#刷新之后怎么跳到首页" class="headerlink" title="刷新之后怎么跳到首页"></a>刷新之后怎么跳到首页</h2><p>刷新之后是未登录状态,会自动跳到登陆页面,先从本地把token取出来，发现token存在，将token更新到内存里。从云端请求用户信息，如果可以请求到信息，表示token是有效的,表示用户是登录的,就会跳到首页</p>
+<p>问题: 刷新后页面会闪</p>
+<p>优化: 不让登录页面展现</p>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;写个变量 默认不展示
+let show_content &#x3D; ref(false); &#x2F;&#x2F;user.js 下面就可以删除了
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<p>右上角Navbar会闪</p>
+<p>solve: 同样的方法。</p>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;user.js加全局变量 
+pulling_info: true,
+&#x2F;&#x2F;表示我们当前是否在获取信息当中 如果在获取信息当中,就不要展示
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>action里面的函数用dispatch</p>
+<p>反之用commit  </p>
+<h2 id="mutations和actions的区别"><a href="#mutations和actions的区别" class="headerlink" title="mutations和actions的区别"></a>mutations和actions的区别</h2><p>如果我们的函数内部修改是异步的(比如从云端拉取信息,拉完之后才会执行)，只能放在actions里面,同步操作放在mutations里</p>
+<h1 id="5-1-创建个人中心页面-上"><a href="#5-1-创建个人中心页面-上" class="headerlink" title="5.1 创建个人中心页面(上)"></a>5.1 创建个人中心页面(上)</h1><p>&#x2F;&#x2F;数据库里用下划线命名 java里用驼峰命名 queryMapper里用下划线</p>
+<p>&#x2F;&#x2F;接口默认是public</p>
+<p>&#x2F;&#x2F;主键自增不仅要在数据库里面写,还要在pojo里面写</p>
+<p>&#x2F;&#x2F;每次创建新东西，想记下来,创建一个新的表 一个pojo 一个 mapper </p>
+<p>&#x2F;&#x2F;这些判断前端判断不判断不可以,后端一定要判断 前端防君子 后端防小人</p>
+<h2 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h2><p>首先我们得知道插入的人是谁，取当前user</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"> <span class="token class-name">UsernamePasswordAuthenticationToken</span> authentication <span class="token operator">=</span>
+                <span class="token punctuation">(</span><span class="token class-name">UsernamePasswordAuthenticationToken</span><span class="token punctuation">)</span> <span class="token class-name">SecurityContextHolder</span><span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getAuthentication</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">UserDetailsImpl</span> loginUser <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">UserDetailsImpl</span><span class="token punctuation">)</span> authentication<span class="token punctuation">.</span><span class="token function">getPrincipal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">User</span> user <span class="token operator">=</span> loginUser<span class="token punctuation">.</span><span class="token function">getUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>创建完之后,加到数据库里,加入注解BotMapper</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token literal-property property">headers</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 验证</span>
+       <span class="token literal-property property">Authorization</span><span class="token operator">:</span> <span class="token string">"Bearer "</span> <span class="token operator">+</span> store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>user<span class="token punctuation">.</span>token<span class="token punctuation">,</span>
+     <span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>过…. 15:41:33<br>在请求头上把token传过去</p>
+<p>过…. 15:41:52<br>后端通过请求头获取token，进行验证</p>
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>删除肯定要在后端实现，要把后端对应的内容删除掉，不然用户一刷新对应的内容就来了。</p>
+<p>删除的话前后端一定要一致。前端删除完后端一定要删掉,不然前后端不一致.</p>
+<h2 id="为什么在自己的bot进行修改-会出现作者不是自己的情况"><a href="#为什么在自己的bot进行修改-会出现作者不是自己的情况" class="headerlink" title="为什么在自己的bot进行修改,会出现作者不是自己的情况?"></a>为什么在自己的bot进行修改,会出现作者不是自己的情况?</h2><p>&#x2F;&#x2F;前端内存里面的东西可以任意改变,后端必须考虑所有情况才是一个安全的后端</p>
+<p>&#x2F;&#x2F;别人可以改前端代码,或者用其他工具构造一些恶意请求</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//前端调试代码</span>
+
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">useStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// $.ajax(&#123;</span>
+    <span class="token comment">//   url: "http://localhost:3000/user/bot/add/",</span>
+    <span class="token comment">//   type: "post",</span>
+    <span class="token comment">//   data: &#123;</span>
+    <span class="token comment">//     title: "Bot的标题",</span>
+    <span class="token comment">//     description: "Bot的描述",</span>
+    <span class="token comment">//     content: "Bot的代码",</span>
+    <span class="token comment">//   &#125;,</span>
+    <span class="token comment">//   headers: &#123; // 验证</span>
+    <span class="token comment">//     Authorization: "Bearer " + store.state.user.token,</span>
+    <span class="token comment">//   &#125;,</span>
+    <span class="token comment">//   success(resp) &#123;</span>
+    <span class="token comment">//     console.log(resp);</span>
+    <span class="token comment">//   &#125;,</span>
+    <span class="token comment">//   error(resp) &#123;</span>
+    <span class="token comment">//     console.log(resp);</span>
+    <span class="token comment">//   &#125;</span>
+    <span class="token comment">// &#125;)</span>
+
+    <span class="token comment">// $.ajax(&#123;</span>
+    <span class="token comment">//   url: "http://localhost:3000/user/bot/remove/",</span>
+    <span class="token comment">//   type: "post",</span>
+    <span class="token comment">//   data: &#123;</span>
+    <span class="token comment">//     bot_id: 8,</span>
+    <span class="token comment">//   &#125;,</span>
+    <span class="token comment">//   headers: &#123; // 验证</span>
+    <span class="token comment">//     Authorization: "Bearer " + store.state.user.token,</span>
+    <span class="token comment">//   &#125;,</span>
+    <span class="token comment">//   success(resp) &#123;</span>
+    <span class="token comment">//     console.log(resp);</span>
+    <span class="token comment">//   &#125;,</span>
+    <span class="token comment">//   error(resp) &#123;</span>
+    <span class="token comment">//     console.log(resp);</span>
+    <span class="token comment">//   &#125;</span>
+    <span class="token comment">// &#125;)</span>
+
+    <span class="token comment">// $.ajax(&#123;</span>
+    <span class="token comment">//   url: "http://localhost:3000/user/bot/update/",</span>
+    <span class="token comment">//   type: "post",</span>
+    <span class="token comment">//   data: &#123;</span>
+    <span class="token comment">//     bot_id: 11,</span>
+    <span class="token comment">//     title: "Bot的标题11",</span>
+    <span class="token comment">//     description: "Bot的描述11",</span>
+    <span class="token comment">//     content: "Bot的代码11",</span>
+    <span class="token comment">//   &#125;,</span>
+    <span class="token comment">//   headers: &#123; // 验证</span>
+    <span class="token comment">//     Authorization: "Bearer " + store.state.user.token,</span>
+    <span class="token comment">//   &#125;,</span>
+    <span class="token comment">//   success(resp) &#123;</span>
+    <span class="token comment">//     console.log(resp);</span>
+    <span class="token comment">//   &#125;,</span>
+    <span class="token comment">//   error(resp) &#123;</span>
+    <span class="token comment">//     console.log(resp);</span>
+    <span class="token comment">//   &#125;</span>
+    <span class="token comment">// &#125;)</span>
+
+    $<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+      <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">"http://localhost:3000/user/bot/getlist/"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">"get"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">headers</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 验证</span>
+        <span class="token literal-property property">Authorization</span><span class="token operator">:</span> <span class="token string">"Bearer "</span> <span class="token operator">+</span> store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>user<span class="token punctuation">.</span>token<span class="token punctuation">,</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+      <span class="token function">success</span><span class="token punctuation">(</span><span class="token parameter">resp</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>resp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+      <span class="token function">error</span><span class="token punctuation">(</span><span class="token parameter">resp</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>resp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h1 id="5-2-创建个人中心页面-下"><a href="#5-2-创建个人中心页面-下" class="headerlink" title="5.2 创建个人中心页面(下)"></a>5.2 创建个人中心页面(下)</h1><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token comment">&lt;!-- 里面写的是字符串而不是一个表达式 加 : --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">:src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>$store.state.user.photo<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://xtzy.xyz">xtzy</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://xtzy.xyz/2023/08/02/king_of_bot/">http://xtzy.xyz/2023/08/02/king_of_bot/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/springboot/">springboot</a><a class="post-meta__tags" href="/tags/vue/">vue</a></div><div class="post_share"><div class="social-share" data-image="/img/nvzhu1.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/08/05/pr/" title="pr学习"><img class="cover" src="/img/hui10.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">pr学习</div></div></a></div><div class="next-post pull-right"><a href="/2023/07/23/algorithm/" title="算法tips"><img class="cover" src="/img/hui10.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">算法tips</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/jianji1.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">xtzy</div><div class="author-info__description">一个平凡的普通人</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xtzyyyyy" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=2419646975&amp;website=www.oicqzone.com" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="mailto:www.2419646975@qq.com" target="_blank" title="Email"><i class="fas fa-envelope-open-text"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Welcome to my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%85%8D%E7%BD%AEgit%E7%8E%AF%E5%A2%83"><span class="toc-text">1.配置git环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-text">2.创建仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E5%90%8E%E7%AB%AF"><span class="toc-text">3.创建项目后端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E5%89%8D%E7%AB%AF"><span class="toc-text">4.创建项目前端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%B0%E5%9B%BE"><span class="toc-text">地图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E9%85%8D%E7%BD%AEMysql%E4%B8%8E%E6%B3%A8%E5%86%8C%E7%99%BB%E9%99%86%E6%A8%A1%E5%9D%97"><span class="toc-text">4 配置Mysql与注册登陆模块</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%AE%A9springboot%E6%93%8D%E4%BD%9Cmysql"><span class="toc-text">如何让springboot操作mysql</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E7%9A%84%E8%AE%A4%E8%AF%81%E6%93%8D%E4%BD%9C"><span class="toc-text">配置用户的认证操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%A0%E7%BB%9F%E7%9A%84%E7%99%BB%E9%99%86%E9%AA%8C%E8%AF%81%E6%A8%A1%E5%BC%8F%EF%BC%88session%E9%AA%8C%E8%AF%81-%E4%B8%8D%E6%96%B9%E4%BE%BF%E9%AA%8C%E8%AF%81%EF%BC%89"><span class="toc-text">传统的登陆验证模式（session验证 不方便验证）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%99%BB%E5%BD%95%E6%8E%88%E6%9D%83%E9%AA%8C%E8%AF%81%E7%9A%84%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%BC%8F-jwt%E9%AA%8C%E8%AF%81%E6%96%B9%E5%BC%8F"><span class="toc-text">登录授权验证的一个模式(jwt验证方式)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#utils-JwtUtil%E7%B1%BB"><span class="toc-text">utils.JwtUtil类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#config-filter-JwtAuthenticationTokenFilter%E7%B1%BB"><span class="toc-text">config.filter.JwtAuthenticationTokenFilter类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%80%E5%87%BA%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0"><span class="toc-text">退出怎么实现</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-3-%E9%85%8D%E7%BD%AEMysql%E4%B8%8E%E6%B3%A8%E5%86%8C%E7%99%BB%E5%BD%95%E6%A8%A1%E5%9D%97%EF%BC%88%E4%B8%8B%EF%BC%89"><span class="toc-text">4.3 配置Mysql与注册登录模块（下）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E9%9C%80%E8%A6%81%E5%8A%A0%E8%A1%A8%E5%A4%B4-%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%B8%8D%E9%9C%80%E8%A6%81%E5%8A%A0%E8%A1%A8%E5%A4%B4"><span class="toc-text">什么时候需要加表头 什么时候不需要加表头</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2-%E8%B7%9F%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%E6%AF%94%E8%BE%83%E5%83%8F"><span class="toc-text">实现注册页面(跟登录页面比较像)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%AF%A6%E7%8F%BE%E5%AE%9E%E7%8E%B0%E7%99%BB%E5%BD%95%E7%8A%B6%E6%80%81%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96"><span class="toc-text">如何實現实现登录状态的持久化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C%E7%9A%84ajax%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%94%BE%E5%9C%A8user-js%E4%B8%AD"><span class="toc-text">注册的ajax为什么不放在user.js中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%99%BB%E5%BD%95%E7%8A%B6%E6%80%81%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96"><span class="toc-text">3.登录状态的持久化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E6%96%B0%E4%B9%8B%E5%90%8E%E6%80%8E%E4%B9%88%E8%B7%B3%E5%88%B0%E9%A6%96%E9%A1%B5"><span class="toc-text">刷新之后怎么跳到首页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mutations%E5%92%8Cactions%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">mutations和actions的区别</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-1-%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%AD%E5%BF%83%E9%A1%B5%E9%9D%A2-%E4%B8%8A"><span class="toc-text">5.1 创建个人中心页面(上)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E5%85%A5"><span class="toc-text">插入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-text">删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E8%87%AA%E5%B7%B1%E7%9A%84bot%E8%BF%9B%E8%A1%8C%E4%BF%AE%E6%94%B9-%E4%BC%9A%E5%87%BA%E7%8E%B0%E4%BD%9C%E8%80%85%E4%B8%8D%E6%98%AF%E8%87%AA%E5%B7%B1%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">为什么在自己的bot进行修改,会出现作者不是自己的情况?</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-2-%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%AD%E5%BF%83%E9%A1%B5%E9%9D%A2-%E4%B8%8B"><span class="toc-text">5.2 创建个人中心页面(下)</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/08/21/git%E5%AD%A6%E4%B9%A0/" title="git学习"><img src="/img/hui10.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git学习"/></a><div class="content"><a class="title" href="/2023/08/21/git%E5%AD%A6%E4%B9%A0/" title="git学习">git学习</a><time datetime="2023-08-21T08:59:12.000Z" title="Created 2023-08-21 16:59:12">2023-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/21/ssh%E5%AD%A6%E4%B9%A0/" title="ssh学习"><img src="/img/hui10.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ssh学习"/></a><div class="content"><a class="title" href="/2023/08/21/ssh%E5%AD%A6%E4%B9%A0/" title="ssh学习">ssh学习</a><time datetime="2023-08-21T08:59:01.000Z" title="Created 2023-08-21 16:59:01">2023-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/21/shell%E5%AD%A6%E4%B9%A0/" title="shell学习"><img src="/img/hui10.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="shell学习"/></a><div class="content"><a class="title" href="/2023/08/21/shell%E5%AD%A6%E4%B9%A0/" title="shell学习">shell学习</a><time datetime="2023-08-21T00:30:57.000Z" title="Created 2023-08-21 08:30:57">2023-08-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/19/linux%E5%AD%A6%E4%B9%A0/" title="linux学习">linux学习</a><time datetime="2023-08-19T06:19:27.000Z" title="Created 2023-08-19 14:19:27">2023-08-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/05/pr/" title="pr学习"><img src="/img/hui10.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="pr学习"/></a><div class="content"><a class="title" href="/2023/08/05/pr/" title="pr学习">pr学习</a><time datetime="2023-08-05T05:53:00.000Z" title="Created 2023-08-05 13:53:00">2023-08-05</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/nvzhu5.png')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By xtzy</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script src="/js/script.js?1"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
